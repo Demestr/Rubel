@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorMain"
+    tools:context=".DetailActivity">
+
+    <TextView
+        android:id="@+id/txt_yesterday_razn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_thin"
+        android:textColor="@color/colorSelectedTab"
+        android:textSize="@dimen/conv_text_size_razn"
+        app:layout_constraintEnd_toEndOf="@+id/txt_yesterday_rate"
+        app:layout_constraintStart_toStartOf="@+id/txt_yesterday_rate"
+        app:layout_constraintTop_toBottomOf="@+id/txt_yesterday_rate" />
+
+    <TextView
+        android:id="@+id/txt_today_razn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_thin"
+        android:textColor="@color/colorSelectedTab"
+        android:textSize="@dimen/conv_text_size_razn"
+        app:layout_constraintEnd_toEndOf="@+id/txt_today_rate"
+        app:layout_constraintStart_toStartOf="@+id/txt_today_rate"
+        app:layout_constraintTop_toBottomOf="@+id/txt_today_rate" />
+
+    <TextView
+        android:id="@+id/txt_tomorrow_razn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_thin"
+        android:textColor="@color/colorSelectedTab"
+        android:textSize="@dimen/conv_text_size_razn"
+        app:layout_constraintEnd_toEndOf="@+id/txt_tomorrow_rate"
+        app:layout_constraintStart_toStartOf="@+id/txt_tomorrow_rate"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tomorrow_rate" />
+
+    <TextView
+        android:id="@+id/txt_today_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/eczar"
+        android:textColor="@color/colorSelectedTab"
+        android:textSize="@dimen/detail_textsize"
+        app:layout_constraintEnd_toStartOf="@+id/txt_today_move"
+        app:layout_constraintStart_toStartOf="@+id/txt_today"
+        app:layout_constraintTop_toBottomOf="@+id/txt_today" />
+
+    <TextView
+        android:id="@+id/txt_today_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/fontawesome_webfont"
+        android:textColor="@color/colorSelectedTab"
+        android:textSize="@dimen/detail_textsize"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_today_rate"
+        app:layout_constraintEnd_toEndOf="@+id/txt_today"
+        app:layout_constraintStart_toEndOf="@+id/txt_today_rate" />
+
+    <TextView
+        android:id="@+id/txt_yesterday_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/eczar"
+        android:textColor="@color/colorSelectedTab"
+        android:textSize="@dimen/detail_textsize"
+        app:layout_constraintEnd_toStartOf="@+id/txt_yesterday_move"
+        app:layout_constraintStart_toStartOf="@+id/txt_yesterday"
+        app:layout_constraintTop_toBottomOf="@+id/txt_yesterday" />
+
+    <TextView
+        android:id="@+id/txt_yesterday_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/fontawesome_webfont"
+        android:textColor="@color/colorSelectedTab"
+        android:textSize="@dimen/detail_textsize"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_yesterday_rate"
+        app:layout_constraintEnd_toEndOf="@+id/txt_yesterday"
+        app:layout_constraintStart_toEndOf="@+id/txt_yesterday_rate" />
+
+    <TextView
+        android:id="@+id/txt_tomorrow_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/eczar"
+        android:textColor="@color/colorSelectedTab"
+        android:textSize="@dimen/detail_textsize"
+        app:layout_constraintEnd_toStartOf="@+id/txt_tomorrow_move"
+        app:layout_constraintStart_toStartOf="@+id/txt_tomorrow"
+        app:layout_constraintTop_toBottomOf="@+id/txt_tomorrow" />
+
+    <TextView
+        android:id="@+id/txt_tomorrow_move"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/fontawesome_webfont"
+        android:textColor="@color/colorSelectedTab"
+        android:textSize="@dimen/detail_textsize"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txt_tomorrow_rate"
+        app:layout_constraintEnd_toEndOf="@+id/txt_tomorrow"
+        app:layout_constraintStart_toEndOf="@+id/txt_tomorrow_rate" />
+
+    <TextView
+        android:id="@+id/txt_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_thin"
+        android:text="Сегодня"
+        android:textColor="@color/colorSelectedTab"
+        android:textSize="@dimen/detail_textsize"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/txt_tomorrow"
+        app:layout_constraintStart_toEndOf="@+id/txt_yesterday"
+        app:layout_constraintTop_toBottomOf="@+id/bottomNavigationView" />
+
+    <TextView
+        android:id="@+id/txt_yesterday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_thin"
+        android:text="Вчера"
+        android:textColor="@color/colorSelectedTab"
+        android:textSize="@dimen/detail_textsize"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/txt_today"
+        app:layout_constraintStart_toEndOf="@+id/txt_tomorrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomNavigationView" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/detailChart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_detail" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <TextView
+        android:id="@+id/txt_tomorrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/roboto_thin"
+        android:text="Завтра"
+        android:textColor="@color/colorSelectedTab"
+        android:textSize="@dimen/detail_textsize"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_today"
+        app:layout_constraintTop_toBottomOf="@+id/bottomNavigationView" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorMain"
+        android:visibility="visible"
+        app:elevation="1dp"
+        app:itemIconTint="@color/period_color"
+        app:itemTextColor="@color/period_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailChart"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:menu="@menu/chart_period" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_detail"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/detailChart"
+        app:layout_constraintEnd_toEndOf="@+id/detailChart"
+        app:layout_constraintStart_toStartOf="@+id/detailChart"
+        app:layout_constraintTop_toTopOf="@+id/detailChart" />
+</androidx.constraintlayout.widget.ConstraintLayout>

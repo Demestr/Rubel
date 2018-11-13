@@ -1,0 +1,71 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="TextViewMainCurrencyScale">
+        <item name="android:textSize">@dimen/card_scale_textsize</item>
+        <item name="android:fontFamily">@font/roboto_thin</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorSelectedTab</item>
+    </style>
+
+    <style name="TextViewMainCurrencyValue">
+        <item name="android:textSize">@dimen/card_value_textsize</item>
+        <item name="android:fontFamily">@font/eczar</item>
+        <item name="android:textColor">@color/colorSelectedTab</item>
+    </style>
+
+    <style name="TextViewHeaderTitles">
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">@font/roboto_condensed_regular</item>
+    </style>
+
+    <style name="DialogDate" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorMain</item>
+    </style>
+
+    <style name="ConverterBox" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="colorAccent">@color/colorCards</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Dark.ActionBar</item>
+    </style>
+
+    <style name="MyEditText" parent="Theme.MaterialComponents.Light">
+        <item name="colorControlNormal">@color/colorMain</item>
+        <item name="colorControlActivated">@color/colorUnSelectedTab</item>
+    </style>
+
+    <style name="HintCurrencyOne" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/colorCurrencyOne</item>
+    </style>
+
+    <style name="HintCurrencyTwo" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/colorCurrencyTwo</item>
+    </style>
+
+    <style name="HintCurrencyThree" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/colorCurrencyThree</item>
+    </style>
+
+    <style name="HintCurrencyFour" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">@color/colorCurrencyFour</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/title_size</item>
+        <item name="android:fontFamily"> @font/roboto_condensed_regular</item>
+    </style>
+</resources>

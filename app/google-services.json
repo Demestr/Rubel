@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "208064179060",
+    "firebase_url": "https://rubel-app.firebaseio.com",
+    "project_id": "rubel-app",
+    "storage_bucket": "rubel-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:208064179060:android:e46ba0ba872a0e5d",
+        "android_client_info": {
+          "package_name": "darkpoint.rubel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "208064179060-ts80siv9ke07ggd1t3npdfv2ppk8kcuu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "darkpoint.rubel",
+            "certificate_hash": "724e3c8c19751fa0ab1cf55e6d892a3edd877ac9"
+          }
+        },
+        {
+          "client_id": "208064179060-l6thurhlchlgu9k7aoldkqe849hu3i92.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpXKo6YdWdU8LrZqRit5rdenjTQ8FSevg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "208064179060-l6thurhlchlgu9k7aoldkqe849hu3i92.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

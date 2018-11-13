@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Рубель</string>
+    <string name="setting_main_currency">Основные валюты (обязательно 4)</string>
+    <string name="conv_warning">Конверсия указана по курсу Нацбанка, конечный курс может изменяться</string>
+    <string name="cur_up">\uf0d8</string>
+    <string name="cur_down">\uf0d7</string>
+    <string name="ad_bottom_bar_id">ca-app-pub-5942497315583191/2974667149</string>
+    <string name="appwidget_text">Данные на: </string>
+    <string name="add_widget">Add widget</string>
+</resources>
