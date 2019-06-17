@@ -1,57 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/item_layout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorCards">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
-        android:id="@+id/item_scale"
-        android:layout_width="wrap_content"
+    <data>
+
+        <variable
+            name="rate"
+            type="darkpoint.rubel.model.Rate" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/roboto_thin"
-        android:textColor="@color/colorSelectedTab"
-        android:textSize="@dimen/all_scale_value"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:background="@color/colorCards">
 
-    <TextView
-        android:id="@+id/item_abr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/roboto_condensed_regular"
-        android:textColor="@color/colorUnSelectedTab"
-        android:textSize="@dimen/all_abr_size"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/item_name"
-        app:layout_constraintStart_toEndOf="@+id/item_scale" />
+        <TextView
+            android:id="@+id/item_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@{String.valueOf(rate.cur_Scale)}"
+            android:textColor="@color/colorSelectedTab"
+            android:textSize="@dimen/all_scale_value"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/item_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/roboto_condensed_regular"
-        android:textColor="@color/colorUnSelectedTab"
-        android:textSize="@dimen/all_name_size"
-        app:layout_constraintBaseline_toBaselineOf="@+id/item_scale"
-        app:layout_constraintStart_toEndOf="@+id/item_scale" />
+        <TextView
+            android:id="@+id/item_abr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:text="@{rate.cur_Abbreviation}"
+            android:textColor="@color/colorUnSelectedTab"
+            android:textSize="@dimen/all_abr_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/item_name"
+            app:layout_constraintStart_toEndOf="@+id/item_scale" />
 
-    <TextView
-        android:id="@+id/item_value"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:fontFamily="@font/eczar"
-        android:textColor="@color/colorSelectedTab"
-        android:textSize="@dimen/all_scale_value"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_condensed_regular"
+            android:text="@{rate.cur_Name}"
+            android:textColor="@color/colorUnSelectedTab"
+            android:textSize="@dimen/all_name_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/item_scale"
+            app:layout_constraintStart_toEndOf="@+id/item_scale" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/item_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/eczar"
+            android:text="@{String.valueOf(rate.cur_OfficialRate)}"
+            android:textColor="@color/colorSelectedTab"
+            android:textSize="@dimen/all_scale_value"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorMainTranparent"
+    android:gravity="center"
     android:orientation="vertical">
 
     <TextView
@@ -10,7 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_thin"
-        android:text="TextView"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:text="01-10-18"
         android:textAlignment="center"
         android:textColor="@color/colorSelectedTab"
         android:textSize="12sp" />
@@ -20,7 +23,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_thin"
-        android:text="TextView"
+        android:padding="2dp"
+        android:text="2.1111"
         android:textAlignment="center"
         android:textColor="@color/colorSelectedTab"
         android:textSize="12sp" />

@@ -1,206 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ProgressBar
-        android:id="@+id/progressbar_converter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
+        <variable
+            name="rateViewModel"
+            type="darkpoint.rubel.activities.MainViewModel" />
+    </data>
 
-    <ScrollView
-        android:id="@+id/conv_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/warningMessageConv"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:focusableInTouchMode="true"
-            android:orientation="vertical">
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/warning"
+            android:textAlignment="center"
+            android:textColor="@color/colorSelectedTab"
+            android:textSize="@dimen/title_size"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/byn"
+        <ScrollView
+            android:id="@+id/conv_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="@dimen/conv_margin"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/colorUnSelectedTab"
-                app:boxBackgroundMode="outline"
-                app:boxCornerRadiusBottomEnd="3dp"
-                app:boxCornerRadiusBottomStart="3dp"
-                app:boxCornerRadiusTopEnd="3dp"
-                app:boxCornerRadiusTopStart="3dp"
-                app:boxStrokeColor="@color/colorUnSelectedTab">
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editText_byn"
+                <TextView
+                    android:id="@+id/conversionDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:imeOptions="actionDone"
-                    android:inputType="numberDecimal"
-                    android:maxLength="20"
-                    android:paddingStart="@dimen/conv_margin"
-                    android:paddingEnd="@dimen/conv_margin"
-                    android:singleLine="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/roboto_condensed_light"
+                    android:text="@string/converterDate"
+                    android:textAlignment="center"
                     android:textColor="@color/colorSelectedTab"
                     android:textSize="@dimen/conv_text_size" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/one"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="@dimen/conv_margin"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/colorCurrencyOne"
-                app:boxBackgroundMode="outline"
-                app:boxCornerRadiusBottomEnd="3dp"
-                app:boxCornerRadiusBottomStart="3dp"
-                app:boxCornerRadiusTopEnd="3dp"
-                app:boxCornerRadiusTopStart="3dp"
-                app:boxStrokeColor="@color/colorCurrencyOne"
-                app:hintTextAppearance="@style/HintCurrencyOne">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:imeOptions="actionDone"
-                    android:inputType="numberDecimal"
-                    android:maxLength="20"
-                    android:paddingStart="@dimen/conv_margin"
-                    android:paddingEnd="@dimen/conv_margin"
-                    android:singleLine="true"
-                    android:textColor="@color/colorSelectedTab"
-                    android:textSize="@dimen/conv_text_size" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/two"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="@dimen/conv_margin"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/colorCurrencyTwo"
-                app:boxBackgroundMode="outline"
-                app:boxCornerRadiusBottomEnd="3dp"
-                app:boxCornerRadiusBottomStart="3dp"
-                app:boxCornerRadiusTopEnd="3dp"
-                app:boxCornerRadiusTopStart="3dp"
-                app:boxStrokeColor="@color/colorCurrencyTwo"
-                app:hintTextAppearance="@style/HintCurrencyTwo">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editText_two"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:imeOptions="actionDone"
-                    android:inputType="numberDecimal"
-                    android:maxLength="20"
-                    android:paddingStart="@dimen/conv_margin"
-                    android:paddingEnd="@dimen/conv_margin"
-                    android:singleLine="true"
-                    android:textColor="@color/colorSelectedTab"
-                    android:textSize="@dimen/conv_text_size" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/three"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="@dimen/conv_margin"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/colorCurrencyThree"
-                app:boxBackgroundMode="outline"
-                app:boxCornerRadiusBottomEnd="3dp"
-                app:boxCornerRadiusBottomStart="3dp"
-                app:boxCornerRadiusTopEnd="3dp"
-                app:boxCornerRadiusTopStart="3dp"
-                app:boxStrokeColor="@color/colorCurrencyThree"
-                app:hintTextAppearance="@style/HintCurrencyThree">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editText_three"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:imeOptions="actionDone"
-                    android:inputType="numberDecimal"
-                    android:maxLength="20"
-                    android:paddingStart="@dimen/conv_margin"
-                    android:paddingEnd="@dimen/conv_margin"
-                    android:singleLine="true"
-                    android:textColor="@color/colorSelectedTab"
-                    android:textSize="@dimen/conv_text_size" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/four"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="@dimen/conv_margin"
-                android:layout_marginEnd="16dp"
-                android:textColorHint="@color/colorCurrencyFour"
-                app:boxBackgroundMode="outline"
-                app:boxCornerRadiusBottomEnd="3dp"
-                app:boxCornerRadiusBottomStart="3dp"
-                app:boxCornerRadiusTopEnd="3dp"
-                app:boxCornerRadiusTopStart="3dp"
-                app:boxStrokeColor="@color/colorCurrencyFour"
-                app:hintTextAppearance="@style/HintCurrencyFour">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editText_four"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:imeOptions="actionDone"
-                    android:inputType="numberDecimal"
-                    android:maxLength="20"
-                    android:paddingStart="@dimen/conv_margin"
-                    android:paddingEnd="@dimen/conv_margin"
-                    android:singleLine="true"
-                    android:textColor="@color/colorSelectedTab"
-                    android:textSize="@dimen/conv_text_size" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="@dimen/conv_margin"
-                android:layout_marginEnd="16dp"
-                android:background="@drawable/converter_two_cur_back">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/cur_one_conv"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1"
+                    android:id="@+id/byn"
                     android:textColorHint="@color/colorUnSelectedTab"
                     app:boxBackgroundMode="outline"
                     app:boxCornerRadiusBottomEnd="3dp"
@@ -208,104 +67,220 @@
                     app:boxCornerRadiusTopEnd="3dp"
                     app:boxCornerRadiusTopStart="3dp"
                     app:boxStrokeColor="@color/colorUnSelectedTab"
-                    app:layout_constraintBottom_toTopOf="@+id/cur_two_conv"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed">
+                    android:hint="@{rateViewModel.currencyBYN.Cur_Abbreviation}"
+                    style="@style/converterTILStyle">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/editText_cur_one_conv"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:imeOptions="actionDone"
-                        android:inputType="numberDecimal"
-                        android:maxLength="20"
-                        android:paddingStart="@dimen/conv_margin"
-                        android:paddingEnd="@dimen/conv_margin"
-                        android:singleLine="true"
-                        android:textColor="@color/colorSelectedTab"
-                        android:textSize="@dimen/conv_text_size" />
+                        android:id="@+id/editText_byn"
+                        android:hint="@{rateViewModel.currencyBYN.Cur_Abbreviation}"
+                        android:text="@{String.valueOf(rateViewModel.curBynConverterValue)}"
+                        style="@style/converterTIETStyle"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <Spinner
-                    android:id="@+id/spinner_cur_one"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:focusableInTouchMode="false"
-                    app:layout_constraintBottom_toBottomOf="@+id/cur_one_conv"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/guideline"
-                    app:layout_constraintTop_toTopOf="@+id/cur_one_conv" />
-
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/cur_two_conv"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="6dp"
-                    android:layout_weight="1"
+                    android:id="@+id/one"
                     android:textColorHint="@color/colorCurrencyOne"
                     app:boxBackgroundMode="outline"
                     app:boxCornerRadiusBottomEnd="3dp"
                     app:boxCornerRadiusBottomStart="3dp"
                     app:boxCornerRadiusTopEnd="3dp"
                     app:boxCornerRadiusTopStart="3dp"
-                    app:boxStrokeColor="@color/colorUnSelectedTab"
+                    app:boxStrokeColor="@color/colorCurrencyOne"
                     app:hintTextAppearance="@style/HintCurrencyOne"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/cur_one_conv">
+                    android:hint="@{rateViewModel.currencyOne.Cur_Abbreviation}"
+                    style="@style/converterTILStyle">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/editText_cur_two_conv"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:imeOptions="actionDone"
-                        android:inputType="numberDecimal"
-                        android:maxLength="20"
-                        android:paddingStart="@dimen/conv_margin"
-                        android:paddingEnd="@dimen/conv_margin"
-                        android:singleLine="true"
-                        android:textColor="@color/colorSelectedTab"
-                        android:textSize="@dimen/conv_text_size" />
+                        android:id="@+id/editText"
+                        android:hint="@{rateViewModel.currencyOne.Cur_Abbreviation}"
+                        android:text="@{String.valueOf(rateViewModel.curOneConverterValue)}"
+                        style="@style/converterTIETStyle"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <Spinner
-                    android:id="@+id/spinner_cur_two"
-                    android:layout_width="0dp"
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/two"
+                    android:textColorHint="@color/colorCurrencyTwo"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="3dp"
+                    app:boxCornerRadiusBottomStart="3dp"
+                    app:boxCornerRadiusTopEnd="3dp"
+                    app:boxCornerRadiusTopStart="3dp"
+                    app:boxStrokeColor="@color/colorCurrencyTwo"
+                    app:hintTextAppearance="@style/HintCurrencyTwo"
+                    android:hint="@{rateViewModel.currencyTwo.Cur_Abbreviation}"
+                    style="@style/converterTILStyle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_two"
+                        android:hint="@{rateViewModel.currencyTwo.Cur_Abbreviation}"
+                        android:text="@{String.valueOf(rateViewModel.curTwoConverterValue)}"
+                        style="@style/converterTIETStyle"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/three"
+                    android:textColorHint="@color/colorCurrencyThree"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="3dp"
+                    app:boxCornerRadiusBottomStart="3dp"
+                    app:boxCornerRadiusTopEnd="3dp"
+                    app:boxCornerRadiusTopStart="3dp"
+                    app:boxStrokeColor="@color/colorCurrencyThree"
+                    app:hintTextAppearance="@style/HintCurrencyThree"
+                    android:hint="@{rateViewModel.currencyThree.Cur_Abbreviation}"
+                    style="@style/converterTILStyle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_three"
+                        android:hint="@{rateViewModel.currencyThree.Cur_Abbreviation}"
+                        android:text="@{String.valueOf(rateViewModel.curThreeConverterValue)}"
+                        style="@style/converterTIETStyle" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/four"
+                    android:textColorHint="@color/colorCurrencyFour"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusBottomEnd="3dp"
+                    app:boxCornerRadiusBottomStart="3dp"
+                    app:boxCornerRadiusTopEnd="3dp"
+                    app:boxCornerRadiusTopStart="3dp"
+                    app:boxStrokeColor="@color/colorCurrencyFour"
+                    app:hintTextAppearance="@style/HintCurrencyFour"
+                    android:hint="@{rateViewModel.currencyFour.Cur_Abbreviation}"
+                    style="@style/converterTILStyle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editText_four"
+                        android:hint="@{rateViewModel.currencyFour.Cur_Abbreviation}"
+                        android:text="@{String.valueOf(rateViewModel.curFourConverterValue)}"
+                        style="@style/converterTIETStyle"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:focusableInTouchMode="false"
-                    app:layout_constraintBottom_toBottomOf="@+id/cur_two_conv"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/guideline"
-                    app:layout_constraintTop_toTopOf="@+id/cur_two_conv" />
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="@dimen/conv_margin"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/converter_two_cur_back"
+                    android:visibility="gone">
 
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideline"
-                    android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/cur_one_conv"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/colorUnSelectedTab"
+                        app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusBottomEnd="3dp"
+                        app:boxCornerRadiusBottomStart="3dp"
+                        app:boxCornerRadiusTopEnd="3dp"
+                        app:boxCornerRadiusTopStart="3dp"
+                        app:boxStrokeColor="@color/colorUnSelectedTab"
+                        app:layout_constraintBottom_toTopOf="@+id/cur_two_conv"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editText_cur_one_conv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="20"
+                            android:paddingStart="@dimen/conv_margin"
+                            android:paddingEnd="@dimen/conv_margin"
+                            android:singleLine="true"
+                            android:textColor="@color/colorSelectedTab"
+                            android:textSize="@dimen/conv_text_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/spinner_cur_one"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:focusableInTouchMode="false"
+                        app:layout_constraintBottom_toBottomOf="@+id/cur_one_conv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toTopOf="@+id/cur_one_conv" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/cur_two_conv"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_weight="1"
+                        android:textColorHint="@color/colorCurrencyOne"
+                        app:boxBackgroundMode="outline"
+                        app:boxCornerRadiusBottomEnd="3dp"
+                        app:boxCornerRadiusBottomStart="3dp"
+                        app:boxCornerRadiusTopEnd="3dp"
+                        app:boxCornerRadiusTopStart="3dp"
+                        app:boxStrokeColor="@color/colorUnSelectedTab"
+                        app:hintTextAppearance="@style/HintCurrencyOne"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cur_one_conv">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editText_cur_two_conv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:imeOptions="actionDone"
+                            android:inputType="numberDecimal"
+                            android:maxLength="20"
+                            android:paddingStart="@dimen/conv_margin"
+                            android:paddingEnd="@dimen/conv_margin"
+                            android:singleLine="true"
+                            android:textColor="@color/colorSelectedTab"
+                            android:textSize="@dimen/conv_text_size" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Spinner
+                        android:id="@+id/spinner_cur_two"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:focusableInTouchMode="false"
+                        app:layout_constraintBottom_toBottomOf="@+id/cur_two_conv"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toTopOf="@+id/cur_two_conv" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.659375" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintGuide_percent="0.659375" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/roboto_thin"
+                    android:text="@string/conv_warning"
+                    android:textColor="@color/colorSelectedTab" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="16dp"
-                android:fontFamily="@font/roboto_thin"
-                android:text="@string/conv_warning"
-                android:textColor="@color/colorSelectedTab" />
+            </LinearLayout>
+        </ScrollView>
 
-        </LinearLayout>
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

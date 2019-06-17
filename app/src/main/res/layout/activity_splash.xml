@@ -1,98 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorMain"
-    tools:context=".SplashActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/splash_r"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_thin"
-        android:text="Р"
-        android:textColor="@color/colorSelectedTab"
-        android:textSize="72sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/splash_u"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorMain"
+        tools:context=".activities.SplashActivity">
 
-    <TextView
-        android:id="@+id/splash_u"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_thin"
-        android:text="у"
-        android:textColor="@color/colorCurrencyOne"
-        android:textSize="72sp"
-        app:layout_constraintBottom_toBottomOf="@+id/splash_r"
-        app:layout_constraintEnd_toStartOf="@+id/splash_b"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/splash_r"
-        app:layout_constraintTop_toTopOf="@+id/splash_r" />
+        <TextView
+            android:id="@+id/splash_r"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/letter_r"
+            android:textColor="@color/colorSelectedTab"
+            android:textSize="72sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/splash_u"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/splash_b"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_thin"
-        android:text="б"
-        android:textColor="@color/colorCurrencyTwo"
-        android:textSize="72sp"
-        app:layout_constraintBottom_toBottomOf="@+id/splash_u"
-        app:layout_constraintEnd_toStartOf="@+id/splash_e"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/splash_u"
-        app:layout_constraintTop_toTopOf="@+id/splash_u"
-        app:layout_constraintVertical_bias="0.49" />
+        <TextView
+            android:id="@+id/splash_u"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/letter_u"
+            android:textColor="@color/colorCurrencyOne"
+            android:textSize="72sp"
+            app:layout_constraintBottom_toBottomOf="@+id/splash_r"
+            app:layout_constraintEnd_toStartOf="@+id/splash_b"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/splash_r"
+            app:layout_constraintTop_toTopOf="@+id/splash_r" />
 
-    <TextView
-        android:id="@+id/splash_e"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_thin"
-        android:text="е"
-        android:textColor="@color/colorCurrencyThree"
-        android:textSize="72sp"
-        app:layout_constraintBottom_toBottomOf="@+id/splash_b"
-        app:layout_constraintEnd_toStartOf="@+id/splash_l"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/splash_b"
-        app:layout_constraintTop_toTopOf="@+id/splash_b"
-        app:layout_constraintVertical_bias="0.48000002" />
+        <TextView
+            android:id="@+id/splash_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/letter_b"
+            android:textColor="@color/colorCurrencyTwo"
+            android:textSize="72sp"
+            app:layout_constraintBottom_toBottomOf="@+id/splash_u"
+            app:layout_constraintEnd_toStartOf="@+id/splash_e"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/splash_u"
+            app:layout_constraintTop_toTopOf="@+id/splash_u"
+            app:layout_constraintVertical_bias="0.49" />
 
-    <TextView
-        android:id="@+id/splash_l"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_thin"
-        android:text="л"
-        android:textColor="@color/colorCurrencyFour"
-        android:textSize="72sp"
-        app:layout_constraintBottom_toBottomOf="@+id/splash_e"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/splash_j"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/splash_e"
-        app:layout_constraintTop_toTopOf="@+id/splash_e"
-        app:layout_constraintVertical_bias="0.49" />
+        <TextView
+            android:id="@+id/splash_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/letter_e"
+            android:textColor="@color/colorCurrencyThree"
+            android:textSize="72sp"
+            app:layout_constraintBottom_toBottomOf="@+id/splash_b"
+            app:layout_constraintEnd_toStartOf="@+id/splash_l"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/splash_b"
+            app:layout_constraintTop_toTopOf="@+id/splash_b"
+            app:layout_constraintVertical_bias="0.48000002" />
 
-    <TextView
-        android:id="@+id/splash_j"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_thin"
-        android:text="ь"
-        android:textColor="@color/colorSelectedTab"
-        android:textSize="72sp"
-        app:layout_constraintBottom_toBottomOf="@+id/splash_r"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/splash_l"
-        app:layout_constraintTop_toTopOf="@+id/splash_r" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/splash_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/letter_l"
+            android:textColor="@color/colorCurrencyFour"
+            android:textSize="72sp"
+            app:layout_constraintBottom_toBottomOf="@+id/splash_e"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/splash_j"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/splash_e"
+            app:layout_constraintTop_toTopOf="@+id/splash_e"
+            app:layout_constraintVertical_bias="0.49" />
+
+        <TextView
+            android:id="@+id/splash_j"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:text="@string/letter_soft_sign"
+            android:textColor="@color/colorSelectedTab"
+            android:textSize="72sp"
+            app:layout_constraintBottom_toBottomOf="@+id/splash_r"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/splash_l"
+            app:layout_constraintTop_toTopOf="@+id/splash_r" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

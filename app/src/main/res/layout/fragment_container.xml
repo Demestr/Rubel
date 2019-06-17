@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="@color/colorMain"
+        android:orientation="vertical"
+        tools:context=".activities.MainActivity"
+        android:id="@+id/linearLayout">
+
+
+        <ProgressBar
+            android:id="@+id/progressBarContainer"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tab_bar" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabGravity="fill"
+            app:tabIconTint="@color/colorUnSelectedTab"
+            app:tabIndicatorColor="@color/colorSelectedTab"
+            app:tabIndicatorHeight="0dp"
+            app:tabInlineLabel="true"
+            app:tabMode="fixed"
+            app:tabPadding="0dp"
+            app:tabRippleColor="@color/colorMainTranparent"
+            app:tabSelectedTextColor="@color/colorSelectedTab"
+            app:tabTextAppearance="@style/MineCustomTabText"
+            tools:layout_conversion_absoluteHeight="-1dp"
+            tools:layout_conversion_absoluteWidth="-1dp">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_toolbar_main"
+                android:text="@string/tollbar_main"
+                tools:layout_conversion_absoluteHeight="-1dp"
+                tools:layout_conversion_absoluteWidth="-1dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_toolbar_exchange"
+                android:text="@string/toolbar_converter"
+                tools:layout_conversion_absoluteHeight="-1dp"
+                tools:layout_conversion_absoluteWidth="-1dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_toolbar_all_currencies"
+                android:text="@string/toolbar_all_currencies"
+                tools:layout_conversion_absoluteHeight="-1dp"
+                tools:layout_conversion_absoluteWidth="-1dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_toolbar_setting"
+                android:text="@string/toolbar_settings"
+                tools:layout_conversion_absoluteHeight="-1dp"
+                tools:layout_conversion_absoluteWidth="-1dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_bar"
+            tools:layout_conversion_absoluteHeight="-1dp"
+            tools:layout_conversion_absoluteWidth="-1dp" />
+
+        <Button
+            android:id="@+id/buttonRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/repeat"
+            android:visibility="gone"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_bar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

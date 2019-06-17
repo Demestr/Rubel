@@ -2,9 +2,32 @@
     <string name="app_name">Рубель</string>
     <string name="setting_main_currency">Основные валюты (обязательно 4)</string>
     <string name="conv_warning">Конверсия указана по курсу Нацбанка, конечный курс может изменяться</string>
-    <string name="cur_up">\uf0d8</string>
-    <string name="cur_down">\uf0d7</string>
     <string name="ad_bottom_bar_id">ca-app-pub-5942497315583191/2974667149</string>
-    <string name="appwidget_text">Данные на: </string>
+    <string name="appwidget_text">Данные на: %s</string>
+    <string name="setting_view">%1$d %2$s</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="converterDate">Дата конверсии - %s</string>
+    <string name="update_button">Update button</string>
+    <string name="letter_r">Р</string>
+    <string name="letter_u">у</string>
+    <string name="letter_b">б</string>
+    <string name="letter_e">е</string>
+    <string name="letter_l">л</string>
+    <string name="letter_soft_sign">ь</string>
+    <string name="menu_year">Год</string>
+    <string name="menu_month">Месяц</string>
+    <string name="menu_week">Неделя</string>
+    <string name="tollbar_main">Главная</string>
+    <string name="toolbar_converter">Конвертер</string>
+    <string name="toolbar_all_currencies">Все валюты</string>
+    <string name="toolbar_settings">Настройки</string>
+    <string name="today">Сегодня</string>
+    <string name="yesterday">Вчера</string>
+    <string name="tomorrow">Завтра</string>
+    <string name="warning">Пожалуйста, выберите 4 валюты в настройках</string>
+    <string name="network_error">Проверьте подключение к интернету</string>
+    <string name="repeat">Повторить</string>
+    <string name="configure">Configure</string>
     <string name="add_widget">Add widget</string>
 </resources>

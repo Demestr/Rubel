@@ -14,5 +14,5 @@
     <dimen name="conv_margin">10dp</dimen>
     <dimen name="widget_value_size">12sp</dimen>
     <dimen name="widget_scale_size">14sp</dimen>
-    <dimen name="widget_top_size">20sp</dimen>
+    <dimen name="widget_top_size">16sp</dimen>
 </resources>
