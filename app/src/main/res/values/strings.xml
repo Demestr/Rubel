@@ -5,8 +5,6 @@
     <string name="ad_bottom_bar_id">id баннера</string>
     <string name="appwidget_text">Данные на: %s</string>
     <string name="setting_view">%1$d %2$s</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="converterDate">Дата конверсии - %s</string>
     <string name="update_button">Update button</string>
     <string name="letter_r">Р</string>
